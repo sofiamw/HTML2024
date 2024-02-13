@@ -5,13 +5,14 @@
     <meta charset="UTF-8">
     <!--Tells the -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Your Name Here">
+    <meta name="author" content="Sofia Williams">
     <meta name="description" content="Default HTML Page for SE 111">
     
     <link type="text/css" rel="stylesheet" href="style.css">
 
     <title>Week 5 | Tables and Forms</title>
 </head>
+<!--SE 111.11, FEB 12, 2024, SOFIA WILLIAMS-->
 <body>
     <!--Build your Table and Form here-->
     <h1>Birthday Party Registration</h1>
@@ -19,9 +20,9 @@
         <table>
 
             <thead>
-                <tr>
+                <tr> <!--HEADERS-->
                     <td>
-                        <h2>Label</h2>
+                        <h2>Label</h2> 
 
                         </td>
                 
@@ -31,11 +32,11 @@
                         <h2>Form Fields</h2>
                     </td>
                 </tr>
-            </thead>
+            </thead> <!--HEADERS-->
 
             <tbody>
 
-                <tr>
+                <tr> <!--PARENT/GUARDIAN NAME-->
                     <td>
                         <label for="gfirst">Parent/Guardian Name:</label>
                     </td>
@@ -45,9 +46,9 @@
                         <br>
                         <input type="text" required maxlength="20" name="gfirst" id="g-last" placeholder="Last Name">
                     </td>
-                </tr>
+                </tr> <!--PARENT/GUARDIAN NAME-->
 
-                <tr>
+                <tr> <!--CHILD'S FIRST NAME-->
                     <td>
                         <label for="cfirst">Child's First Name:</label>
                     </td>
@@ -55,9 +56,9 @@
                     <td>
                         <input type="age" required name="cfirst" id="c-first" placeholder="Child's First Name">
                     </td>
-                </tr>
+                </tr> <!--CHILD'S FIRST NAME-->
 
-                <tr>
+                <tr> <!--CHILD'S AGE-->
                     <td>
                         <label for="age">Child's Age</label>
                     </td>
@@ -65,17 +66,17 @@
                     <td>
                         <input type="number" required name="age" id="age" value="3">
                     </td>
-                </tr>
+                </tr> <!--CHILD'S AGE-->
 
-                <tr>
+                <tr> <!--DATE AND TIME-->
                     <td>
                         <h2>Date and Time</h2>
                     </td>
 
                     <td></td>
-                </tr>
+                </tr> <!--DATE AND TIME-->
 
-                <tr>
+                <tr> <!--DATE-->
                     <td>
                         <label for="date">Date</label>
                     </td>
@@ -83,9 +84,9 @@
                     <td>
                         <input type="date" required name="date" id="date">
                     </td>
-                </tr>
+                </tr> <!--DATE-->
 
-                <tr>
+                <tr> <!--TIME-->
                     <td>
                         <label for="time">Start Time</label>
                     </td>
@@ -93,9 +94,9 @@
                     <td>
                         <input type="time" required name="time" id="time">
                     </td>
-                </tr>
+                </tr> <!--TIME-->
 
-                <tr>
+                <tr> <!--GUESTS-->
                     <td>
                         <label for="guests">Number of Guests</label>
                     </td>
@@ -103,17 +104,17 @@
                     <td>
                         <input type="number" name="guests" id="guests" value="5">
                     </td>
-                </tr>
+                </tr> <!--GUESTS-->
 
-                <tr>
+                <tr> <!--FOOD-->
                     <td>
                         <h2>Food</h2>
                     </td>
 
                     <td></td>
-                </tr>
+                </tr> <!--FOOD-->
 
-                <tr>
+                <tr> <!--SIZE-->
                     <td>
                         <label for="size">Size</label>
                     </td>
@@ -123,9 +124,9 @@
                         <input type="radio" name="size" id="size" value="md">Medium
                         <input type="radio" name="size" id="size" value="lg">Large
                     </td>
-                </tr>
+                </tr> <!--SIZE-->
 
-                <tr>
+                <tr> <!--DRINK-->
                     <td>
                         <label for="drinks">Drinks</label>
                         <label for="drink1"></label>
@@ -146,9 +147,9 @@
                         <br>
                         <input type="checkbox" name="drink5" id="drink5" value="icedtea">Iced Tea
                     </td>
-                </tr>
+                </tr> <!--DRINK-->
 
-                <tr>
+                <tr> <!--CAKE-->
                     <td>
                         <label for="cake">Cake</label>
                     </td>
@@ -160,8 +161,44 @@
                             <option value="I'll Bring My Own">I'll Bring My Own</option>
                         </select>
                     </td>
-                </tr>
+                </tr> <!--CAKE-->
 
+                <tr> <!--DECOR-->
+                    <td>
+                        <h2>Decorations</h2></td>
+
+                    <td></td>
+                </tr> <!--DECOR-->
+
+                <tr> <!--COLOR SCHEME-->
+                    <td>
+                        <label for="colors">Color Scheme</label>
+                    </td>
+
+                    <td>
+                        Choose a color scheme for the party 
+                        <br>
+                        <input type="color" name="colors">
+                    </td>
+                </tr> <!--COLOR SCHEME-->
+
+                <tr> <!--COMMENTS-->
+                    <td>
+                        <label for="comments">Additional Comments</label>
+                    </td>
+
+                    <td>
+                        <textarea placeholder="Please add any additional comments here" name="comments"></textarea>
+                    </td>
+                </tr> <!--COMMENTS-->
+
+                <tr> <!--SUBMIT-->
+                    <td></td>
+
+                    <td> 
+                        <input type="submit" value="Submit">
+                    </td>
+                </tr> <!--SUBMIT-->
 
             </tbody>
         </table>
