@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Sofia Williams">
+    <meta name="description" content="JavaScript Pay Calculator">
+    <title>JavaScript Pay Calculator</title>
+</head>
+<!--Sofia Williams. HTML SE 111.11. February 15, 2024-->
+<body>
+    <h1>JavaScript Pay Calculator</h1>
+    <script>
+        //begin of code
+
+        //VARIABLES
+        var tax = 0.2
+        var pHour = Number(prompt('What is your hourly pay?: '))
+        console.log(`Your hourly pay is ${pHour}`)
+        var hours = Number(prompt(`How many hours did you work?: `))
+        console.log(`You worked ${hours} hours!`)
+
+        //MATH
+        var grossPay = pHour * hours 
+        var taxAmmount = grossPay * tax
+        var net = grossPay - taxAmmount
+        
+        //OUTPUT
+        alert(`Gross Pay: $${grossPay.toFixed(2)} \n Uncle Sam's Share: $${taxAmmount.toFixed(2)} \n Net Pay: $${net.toFixed(2)}`)
+        console.log(` Gross Pay: $${grossPay.toFixed(2)} \n Uncle Sam's Share: $${taxAmmount.toFixed(2)} \n Net Pay: $${net.toFixed(2)}`)
+
+
+    </script>
+</body>
+</html>
