@@ -117,13 +117,13 @@
         */
         var body = document.querySelector(`body`)
         var h1 = document.querySelector(`h1`)
-        var first = document.getElementById(`#first`)
-        var last = document.getElementById(`#last`)
-        var rate = document.getElementById(`#rate`)
-        var hours = document.getElementById(`#hours`)
-        var div = document.querySelector(`div`)
-        var enter = document.getElementById(`#enter-button`)
-        var confirm = document.getElementById(`#confirm-button`)
+        var first = document.getElementById(`first`)
+        var last = document.getElementById(`last`)
+        var rate = document.getElementById(`rate`)
+        var hours = document.getElementById(`hours`)
+        var info = document.getElementById(`info`)
+        var enter = document.getElementById(`enter-button`)
+        var confirm = document.getElementById(`confirm-button`)
 
         console.log(body)
         console.log(h1)
@@ -131,7 +131,7 @@
         console.log(`#last: ${last.id}`)
         console.log(`#rate`)
         console.log(`#hours`)
-        console.log(div)
+        console.log(`#info`)
         console.log(`#enter-button`)
         console.log(`#confirm-button`)
 
@@ -142,6 +142,7 @@
             add an event listener to the #confirm-button that runs a function called "confirmForm"
         */
         document.querySelector(`#enter-button`).addEventListener(`click`, formData)
+        document.querySelector(`#confirm-button`).addEventListener(`click`, confirmData)
 
         //PART3------building event functions----------------------
         /*
@@ -156,7 +157,7 @@
                     HINT EX: `<p><b>Full Name:</b> ${fullName}`
 
                 REMEMBER: form text field data is treated as a STRING so you will most likely need the Number() 
-
+            
 
             confirmForm() instructions:
                 -store the input element values to descriptive names
@@ -169,6 +170,36 @@
         */
        function formData(event)
        {
+            info.innerHTML = ` `
+             
+            //variables
+            var fvalue = first.value //first name
+            var lvalue = last.value //last name
+
+            var fullName = fvalue + ` ` + lvalue //full name
+
+            var hvalue = Number(hours.value) //hours
+
+            var pvalue = Number(rate.value) //hourly rate
+
+            var grossPay = pvalue * hvalue //gross pay
+
+            var taxAmount = grossPay * 0.2 //tax amount
+
+            var netPay = grossPay - taxAmount //netpay 
+
+            //console logs begin
+            console.log(`Name: ${fullName}`)
+            console.log(`Gross Pay: ${grossPay}`)
+            console.log(`Tax Amount: ${taxAmount}`)
+            console.log(`Net Pay: ${netPay}`)
+            //console logs end
+
+            //info section
+            info.innerHTML += `<p><b>Full Name:</b> ${fullName}</p>`
+            info.innerHTML += `<p><b>Gross Pay:</b> ${grossPay.toFixed(2)}</p>`
+            info.innerHTML += `<p><b>Tax Amount:</b> ${taxAmount.toFixed(2)}</p>`
+            info.innerHTML += `<p><b>Net Pay:</b> ${netPay.toFixed(2)}</p>`
             //EXTRA CREDIT---------+5pts-------------------------------
             /*
                 Once your file is working, add ONE INSTRUCTION above this comment, but inside of the formData(), that makes sure if the user resubmits the form without reloading the page, only the new form info is displayed
@@ -179,6 +210,27 @@
 
        function confirmData(event)
        {
+            info.innerHTML = ` `
+
+            //variables
+            var fvalue = first.value //first name
+            var lvalue = last.value //last name
+
+            var fullName = fvalue + ` ` + lvalue //full name
+
+            var hvalue = Number(hours.value) //hours
+
+            var pvalue = Number(rate.value) //hourly rate
+
+            var grossPay = pvalue * hvalue //gross pay
+
+            var taxAmount = grossPay * 0.2 //tax amount
+
+            var netPay = grossPay - taxAmount //netpay 
+
+            //alert
+            alert(`Full Name: ${fullName} \n Gross Pay: ${grossPay.toFixed(2)} \n Tax Amount: ${taxAmount.toFixed(2)} \n Net Pay: ${netPay.toFixed(2)}`)
+
 
        }//confirmData()
 
